@@ -16,6 +16,9 @@ public class tree2 {
 
         }
     }
+    /*
+     * 트리의 node 구현을 위한 클래스
+     */
     static List<Node>[] list;
     public static BufferedReader toBufferedReader(String str) {
         InputStream is = new ByteArrayInputStream(str.getBytes());
@@ -40,6 +43,9 @@ public class tree2 {
             int right = line[2].charAt(0) -'A'+1;
             list[data].add(new Node(left, right));
         }
+        /*
+         * int type으로 처리하기 위해서 아스키코드로 처리
+         */
 
         preorder(1);
         sb.append("\n");
@@ -59,6 +65,9 @@ public class tree2 {
             if(l != -18) preorder(l);
             if(r != -18) preorder(r);
         }
+        /*
+         * .에서 A의 아스키코드를 빼면 -18
+         */
     }
 
     static void inorder(int start) {

@@ -34,6 +34,9 @@ public class greedy2 {
                 K = K % coin[i];
             }
         }
+        /*
+         * 남은 금액보다 액수가 작은 동전 중 가장 큰 액수의 동전으로 처리
+         */
         return count;
     }
 

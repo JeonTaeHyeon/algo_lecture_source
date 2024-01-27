@@ -51,9 +51,13 @@ public class tree1 {
         isVisit[index] = true;
         for (int i : list[index]) {
             if (!isVisit[i]) {
-                parent[i] = index; //parent list에 각 노드들의 부모값을 저장해준다
+                parent[i] = index;
                 dfs(i);
             }
+            /*
+             * 1번은 무조건 루트이기 때문에 현재 index에 연결되어 있는 node는 모두 자식 노드이다.
+             * 따라서 현재 index를 저장해주면 된다.
+             */
         }
     }
 }

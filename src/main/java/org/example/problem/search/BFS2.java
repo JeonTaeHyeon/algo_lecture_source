@@ -46,6 +46,9 @@ public class BFS2 {
             for(int j = 0 ; j < ch.length ; j++) {
                 map[i][j] = Character.getNumericValue(ch[j]);
             }
+            /*
+             * 입력에 개행문자 없이 붙어서 들어왔으므로 위와 같이 처리
+             */
         }
         visit[0][0] = true;
         bfs(0,0);

@@ -14,6 +14,10 @@ public class dp1 {
             dp[3] = 1;
         if (N >= 5)
             dp[5] = 1;
+        /*
+         * 6번째 index까지 초기값을 설정해 주어야 정상적으로 동작함
+         * 점화식에 dp[i-5]가 사용되기 때문
+         */
 
         for (int i = 6; i <= N; i++) {
             if (i % 5 == 0) {
@@ -23,6 +27,9 @@ public class dp1 {
             } else {
                 if (dp[i - 3] != 0 && dp[i - 5] != 0) {
                     dp[i] = Math.min(dp[i - 3], dp[i - 5]) + 1;
+                    /*
+                     * dp[i - 3], dp[i - 5]가 둘다 0이면 이미 불가능한 상태
+                     */
                 }
             }
         }
